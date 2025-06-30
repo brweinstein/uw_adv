@@ -431,48 +431,48 @@ Thus, in both cases we get a contradiction. Therefore $f$ is not surjective.
 	Hence $n \mathbb{Z} \subseteq Y$.
 	
 	Therefore, the smallest sticky subset of $\mathbb{Z}$ containing $n$ is $n \mathbb{Z}$.
-	
-\textbf{(b)}
 
-Fix $n \in \mathbb{Z}$ with $n \ne \pm 1$.
+\textbf{(b)} Fix $n \in \mathbb{Z}$ with $n \ne \pm 1$.
 
-We are asked to find all sticky subsets $X \subset \mathbb{Z}$ satisfying:
-
+We are asked to find all proper sticky subsets $X \subset \mathbb{Z}$ satisfying:
 \begin{enumerate}[label=(\roman*)]
-	\item $X \ne \mathbb{Z}$,
-	\item $n \in X$,
-	\item $X$ is maximal among all proper sticky subsets of $\mathbb{Z}$ containing $n$.
+  \item $X \ne \mathbb{Z}$,
+  \item $n \in X$,
+  \item $X$ is maximal (under inclusion) among all proper sticky subsets of $\mathbb{Z}$ containing $n$.
 \end{enumerate}
 
-\textit{Recall:} A subset $X \subset \mathbb{Z}$ is sticky if it is closed under:
+\textit{Recall:} A subset $X \subset \mathbb{Z}$ is \textbf{sticky} if:
 \begin{itemize}
-	\item addition: if $x, y \in X$ then $x + y \in X$, and
-	\item integer multiplication: if $x \in X$, $m \in \mathbb{Z}$ then $mx \in X$.
+  \item $x, y \in X \Rightarrow x + y \in X$ (closed under addition),
+  \item $x \in X, m \in \mathbb{Z} \Rightarrow mx \in X$ (closed under integer multiplication).
 \end{itemize}
 
-As shown in part (a), the smallest sticky subset of $\mathbb{Z}$ containing $n$ is:
+It is known that the sticky subsets of $\mathbb{Z}$ are exactly the additive subgroups of $\mathbb{Z}$, which are all of the form
 \[
-X_n = n\mathbb{Z} = \{ kn \mid k \in \mathbb{Z} \}.
+d\mathbb{Z} = \{dk \mid k \in \mathbb{Z}\}
 \]
-More generally, any sticky subset of $\mathbb{Z}$ is of the form $d\mathbb{Z}$ for some $d \in \mathbb{N}$.
+for some $d \in \mathbb{N}$.
 
-We want all proper sticky subsets $X = d\mathbb{Z} \subsetneq \mathbb{Z}$ such that:
+We seek all such $d\mathbb{Z} \subsetneq \mathbb{Z}$ such that:
 \begin{itemize}
-	\item $n \in d\mathbb{Z} \iff d \mid n$,
-	\item and $d\mathbb{Z}$ is maximal among such proper sticky sets.
+  \item $n \in d\mathbb{Z} \iff d \mid n$, and
+  \item $d\mathbb{Z}$ is maximal (under inclusion) among all proper sticky subsets containing $n$.
 \end{itemize}
 
-So we want all divisors $d > 1$ of $n$ such that $d\mathbb{Z}$ is not properly contained in any other proper sticky subset that contains $n$.
+Since $d_1\mathbb{Z} \subset d_2\mathbb{Z} \iff d_2 \mid d_1$, maximality of $d\mathbb{Z}$ among proper sticky subsets means there is no smaller $d' > 1$ with $d' \mid n$ and $d' \mid d$.
 
-But since $d_1\mathbb{Z} \subset d_2\mathbb{Z} \iff d_2 \mid d_1$, the \emph{maximal} proper sticky subsets containing $n$ are the ones where $d$ is the smallest possible positive divisor of $n$ greater than $1$—but in fact, every $d > 1$ dividing $n$ gives a distinct such sticky set $d\mathbb{Z}$, and they are all maximal under inclusion among proper sticky sets containing $n$.
+In other words, $d$ must be \textbf{minimal} among all positive divisors of $n$ greater than $1$.
 
-\textbf{Conclusion:} The sticky subsets $X \subsetneq \mathbb{Z}$ satisfying the conditions are precisely the sets:
+These minimal positive divisors of $n$ are exactly the \textbf{distinct prime divisors} of $n$.
+
+\medskip
+
+\textbf{Conclusion:} Let $p_1, \dots, p_k$ be the distinct prime divisors of $n$. Then the sticky subsets $X \subsetneq \mathbb{Z}$ satisfying the given conditions are:
 \[
-X = d\mathbb{Z} \quad \text{where } d > 1 \text{ and } d \mid n.
+X = p_i\mathbb{Z} \quad \text{for each prime } p_i \mid n.
 \]
 
-\noindent The number of such subsets is equal to the number of positive divisors of $n$ greater than $1$.
-
+There are exactly $k$ such subsets, one for each distinct prime divisor of $n$.
 	
 \end{solution}
 
